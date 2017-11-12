@@ -1,16 +1,39 @@
 $(document).ready(function() {
+    function isTablet() {
+        if (('ontouchstart' in window) || // FF, Chrome, Safari
+            (navigator.maxTouchPoints > 0) ||  // >= IE 10
+            (navigator.msMaxTouchPoints > 0)) {
+
+            // tablet orientation portrait or landscape
+            if (window.innerWidth < window.innerHeight) {
+                // Bootstrap sizes for sm/md
+                return (window.innerWidth > 767 && window.innerWidth < 993);
+            } else {
+                return (window.innerHeight > 767 && window.innerHeight < 993);
+            }
+        }
+        return false;
+    }
+
+    if(isTablet()) {
+        window.navigate('index_tab.html');
+    }
+
     var videoOpen = document.getElementById('ratDressVideo');
     var videoRoom = document.getElementById('ratRoom');
     var videoBoth = document.getElementById('bothRat');
     var videoBeautiful = document.getElementById('ratBeautiful');
+    var audioHope = document.getElementById('ratHope');
+    var audioFuture = document.getElementById('ratFuture');
+
     $('#fullpage').fullpage({
         anchors: ['1stPage', '2ndPage', '3rdPage','4thPage','5thPage','6thPage','7thPage',
             '8thPage','9thPage','10thPage','11thPage','12thPage','13thPage','14thPage','15thPage'],
         // sectionsColor: ['#000', '#fff', '#fff'],
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['First page', 'Second page', 'Third page', 'Forth Page', 'Fifth Page', 'Sixth Page','Seventh Page',
-            'Eighth Page','Ninth Page','10th Page','11th Page','12th Page','13th Page','14th Page','15th Page'],
+        navigationTooltips: ['Start', 'Second page', 'Third page', 'Forth Page', 'Fifth Page', 'Sixth Page','Seventh Page',
+            'Eighth Page','Ninth Page','10th Page','11th Page','12th Page','13th Page','14th Page','End'],
         afterLoad: function(anchorLink, index){
             if(index==1){
                 videoOpen.play();
@@ -19,6 +42,7 @@ $(document).ready(function() {
                 videoRoom.play();
             }
             if(index == 3){
+
                 $('#audioPlay1').attr('src','./imgs/audioplay.png');
                 document.getElementById('ratPoem_body').play();
             }
@@ -33,8 +57,16 @@ $(document).ready(function() {
                 $('#audioPlay3').attr('src','./imgs/audioplay.png');
                 document.getElementById('ratMisd').play();
             }
+            if(index==12){
+                $('#audioPlay4').attr('src','./imgs/audioplay.png');
+                audioHope.play();
+            }
             if(index==14){
                 videoBeautiful.play();
+            }
+            if(index==15){
+                $('#audioPlay5').attr('src','./imgs/audioplay.png');
+                audioFuture.play();
             }
 
         },
@@ -58,8 +90,14 @@ $(document).ready(function() {
             if(index==9){
                 document.getElementById('ratMisd').currentTime=0;
             }
+            if(index=12){
+                audioHope.currentTime =0;
+            }
             if(index=14){
                 videoBeautiful.currentTime =0;
+            }
+            if(index=15){
+                audioFuture.currentTime =0;
             }
         },
         afterSlideLoad: function (anchorLink, slideIndex) {
@@ -104,6 +142,26 @@ $(document).ready(function() {
             document.getElementById('ratMisd').play()
         }
     });
+    $('#audioPlay4').on('click', function () {
+        if(isPlaying('ratHope')){
+            this.src='./imgs/audioPause.png';
+            document.getElementById('ratHope').pause()
+        }else{
+            this.src='./imgs/audioplay.png';
+            document.getElementById('ratHope').play()
+        }
+    });
+    $('#audioPlay5').on('click', function () {
+        if(isPlaying('ratFuture')){
+            this.src='./imgs/audioPause.png';
+            document.getElementById('ratFuture').pause()
+        }else{
+            this.src='./imgs/audioplay.png';
+            document.getElementById('ratFuture').play()
+        }
+    });
+
+
     document.getElementById('ratPoem_body').addEventListener("ended", function(){
         this.currentTime = 0;
         console.log("ended");

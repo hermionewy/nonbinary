@@ -32,6 +32,7 @@ $(document).ready(function() {
         // sectionsColor: ['#000', '#fff', '#fff'],
         navigation: true,
         navigationPosition: 'right',
+        showActiveTooltip: true,
         navigationTooltips: ['Start', 'Second page', 'Third page', 'Forth Page', 'Fifth Page', 'Sixth Page','Seventh Page',
             'Eighth Page','Ninth Page','10th Page','11th Page','12th Page','13th Page','14th Page','End'],
         afterLoad: function(anchorLink, index){
@@ -107,7 +108,7 @@ $(document).ready(function() {
                 videoRoom.currentTime = 0;
             }
         },
-        responsiveWidth: 900,
+        //responsiveWidth: 900,
         afterResponsive: function(isResponsive){
 
         }

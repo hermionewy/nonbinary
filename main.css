@@ -149,15 +149,19 @@ div.container-fluid{
 }
 .bgImg{
 	position: absolute;
-	left: 0;
-	top: 0;
-	z-index: -10;
-	overflow: hidden;
+	left:0%;
+	top:0%;
+	z-index: -100;
+	width: 100%;
 	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 .bgImg img{
 	width: 100%;
 }
+
 /*#section8{*/
 	/*background-color: black;*/
 /*}*/
@@ -223,4 +227,38 @@ div.container-fluid{
 }
 .row{
 	margin-bottom: 25px;
+}
+#shupeBackground{
+	background-image: url("imgs/shupeBackground.jpg");
+	background-position: top;
+}
+#shupe2{
+	background-image: url("imgs/shupe2.jpg");
+	background-position: top;
+}
+#shupeFlag{
+	background-image: url("imgs/shupeFlag.jpg");
+	background-position: top;
+}
+#ratMirror{
+	background-image: url("./imgs/ratMirror.png");
+}
+#shupeDMVbg{
+	background-image: url("./imgs/shupeDMVbg.jpg");
+}
+#shupePride{
+	background-image: url("./imgs/shupePride.jpg");
+	background-position: top;
+}
+/*#shupeMarried{*/
+	/*background-image: url("./imgs/shupeMarried.png");*/
+/*}*/
+#nezumi{
+	margin-left: 2rem;
+	width: 120px;
+}
+@media only screen and (max-width: 800px){
+	html, body{
+		font-size: 80%
+	}
 }

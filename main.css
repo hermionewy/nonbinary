@@ -1,10 +1,12 @@
 .intro h1{
 	font-size: 3.5rem;
-	font-family: "BentonSansComp", 'helvetica', 'arial';
+	/*font-family: "BentonSansComp", 'helvetica', 'arial';*/
+	font-family: 'BentonSansComp','helvetica';
 	font-weight: bold;
 	color: #000;
 	padding:1rem;
 	background-color: rgba(255,255,255, 0.8);
+	border-left: 0.5rem solid #8d529d;
 }
 .img{
 	max-width: 100%;
@@ -16,6 +18,7 @@
 	padding: 0.6rem;
 	background-color: rgba(255,255,255, 0.8);
 	vertical-align: middle;
+	border-left: 0.1rem solid #8d529d;
 }
 
 /* Centered texts in each section
@@ -250,6 +253,9 @@ div.container-fluid{
 	background-image: url("./imgs/shupePride.jpg");
 	background-position: top;
 }
+/*#ratRoomPic{*/
+	/*background-image: url("./imgs/ratRoom.png");*/
+/*}*/
 /*#shupeMarried{*/
 	/*background-image: url("./imgs/shupeMarried.png");*/
 /*}*/
@@ -261,4 +267,7 @@ div.container-fluid{
 	html, body{
 		font-size: 80%
 	}
+}
+.fp-controlArrow.fp-next{
+	opacity: 0;
 }

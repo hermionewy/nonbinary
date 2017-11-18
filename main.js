@@ -40,6 +40,7 @@ $(document).ready(function() {
                 videoOpen.play();
             }
             if(index==2){
+                console.log('ratRoom show!');
                 videoRoom.play();
             }
             if(index == 3){
@@ -101,13 +102,13 @@ $(document).ready(function() {
                 audioFuture.currentTime =0;
             }
         },
-        afterSlideLoad: function (anchorLink, slideIndex) {
-            if(slideIndex==1){
-                videoRoom.play();
-            } else{
-                videoRoom.currentTime = 0;
-            }
-        },
+        // afterSlideLoad: function (anchorLink, slideIndex) {
+        //     if(slideIndex==1){
+        //         videoRoom.play();
+        //     } else{
+        //         videoRoom.currentTime = 0;
+        //     }
+        // },
         //responsiveWidth: 900,
         afterResponsive: function(isResponsive){
 

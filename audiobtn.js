@@ -1,5 +1,5 @@
-function testAudio() {
-
+function audioBtn() {
+    console.log("testAudio");
     var playObj = document.getElementById("playable");
     var audioObj = document.getElementById("listen");
     audioObj.setAttribute("src", "imgs/ratPoem_body.mp3");

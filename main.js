@@ -30,11 +30,11 @@ $(document).ready(function() {
         anchors: ['1stPage', '2ndPage', '3rdPage','4thPage','5thPage','6thPage','7thPage',
             '8thPage','9thPage','10thPage','11thPage','12thPage','13thPage','14thPage','15thPage'],
         // sectionsColor: ['#000', '#fff', '#fff'],
-        // navigation: true,
-        // // navigationPosition: 'right',
-        // // showActiveTooltip: true,
-        // navigationTooltips: ['Start', 'Second page', 'Third page', 'Forth Page', 'Fifth Page', 'Sixth Page','Seventh Page',
-        //     'Eighth Page','Ninth Page','10th Page','11th Page','12th Page','13th Page','14th Page','End'],
+        navigation: true,
+        navigationPosition: 'right',
+        showActiveTooltip: true,
+        navigationTooltips: ['Start', 'Second page', 'Third page', 'Forth Page', 'Fifth Page', 'Sixth Page','Seventh Page',
+            'Eighth Page','Ninth Page','10th Page','11th Page','12th Page','13th Page','14th Page','End'],
         afterLoad: function(anchorLink, index){
             if(index==1){
                 videoOpen.play();

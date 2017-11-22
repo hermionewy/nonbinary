@@ -31,6 +31,7 @@ $(document).ready(function() {
             '8thPage','9thPage','10thPage','11thPage','12thPage','13thPage','14thPage','15thPage'],
         // sectionsColor: ['#000', '#fff', '#fff'],
         navigation: true,
+        scrollOverflow: true,
         navigationPosition: 'right',
         showActiveTooltip: true,
         navigationTooltips: ['Start', 'Second page', 'Third page', 'Forth Page', 'Fifth Page', 'Sixth Page','Seventh Page',

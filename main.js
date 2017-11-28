@@ -1,23 +1,5 @@
 $(document).ready(function() {
-    function isTablet() {
-        if (('ontouchstart' in window) || // FF, Chrome, Safari
-            (navigator.maxTouchPoints > 0) ||  // >= IE 10
-            (navigator.msMaxTouchPoints > 0)) {
 
-            // tablet orientation portrait or landscape
-            if (window.innerWidth < window.innerHeight) {
-                // Bootstrap sizes for sm/md
-                return (window.innerWidth > 767 && window.innerWidth < 993);
-            } else {
-                return (window.innerHeight > 767 && window.innerHeight < 993);
-            }
-        }
-        return false;
-    }
-
-    if(isTablet()) {
-        window.navigate('index_tab.html');
-    }
 
     var videoOpen = document.getElementById('ratDressVideo');
     var videoRoom = document.getElementById('ratRoom');
@@ -30,9 +12,13 @@ $(document).ready(function() {
         anchors: ['1stPage', '2ndPage', '3rdPage','4thPage','5thPage','6thPage','7thPage',
             '8thPage','9thPage','10thPage','11thPage','12thPage','13thPage','14thPage','15thPage'],
         // sectionsColor: ['#000', '#fff', '#fff'],
+        scrollingSpeed: 1000,
         navigation: true,
         navigationPosition: 'right',
         showActiveTooltip: true,
+        autoScrolling: true,
+        fitToSection: true,
+        scrollOverflow: false,
         navigationTooltips: ['Start', 'Second page', 'Third page', 'Forth Page', 'Fifth Page', 'Sixth Page','Seventh Page',
             'Eighth Page','Ninth Page','10th Page','11th Page','12th Page','13th Page','14th Page','End'],
         afterLoad: function(anchorLink, index){

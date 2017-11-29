@@ -8,8 +8,10 @@
     <meta name="description" content="fullPage plugin by Alvaro Trigo. Create fullscreen pages fast and simple. One page scroll sections jquery plugin. Mouse snap." />
     <meta name="keywords"  content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,snap,snapping,apple,scroll,sections" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./vendor/jquery.fullpage.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="./vendor/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="main.css" />
 
     <!--<link rel="stylesheet" type="text/css" href="mainNew.css"/>-->
@@ -26,10 +28,18 @@
         </video>
         <div class="section" id="section0">
             <div class="row">
-                <div class="col-md-5 col-sm-12 intro">
+                <div class="col-md-5 col-sm-12" id="nb-title">
                     <h1>A new identity <br/>beyond he and she</h1>
+                    <p class="byline">
+                        Story: Alison Berstein, Wei Tang, Yan Wu<br/>
+                        Develop: Yan Wu
+                    </p>
                     <!--<p class="subtitle">The fight over pronouns is only part of the struggle for non-binary transgender people</p>-->
                 </div>
+            </div>
+            <div class="arrow bounce" id="bouncyArrow1">
+                <a class="fa fa-chevron-down fa-2x" id='arrowNext' href=""></a>
+                <p class="scrollTip">Scroll</p>
             </div>
         </div>
         <div class="section" id="section1">
@@ -39,38 +49,13 @@
             </video>
 
             <div class="row">
-                <div class="col-sm-12 col-md-4 intro">
+                <div class="col-sm-12 col-md-4 offset-md-1 intro">
                     <p>
                         Step into Rat’s bedroom and you quickly learn that this is a person not afraid of expressing themselves. This is the room of a musician, artist, child model, YouTuber, and budding entrepreneur for a small apparel company.<br/><br/>
                         A guitar rests in the corner, waiting to be picked up. Clothes in bold colors and designs line the racks. But despite all of these avenues for expression, there is one deeply personal message that this performer wants heard more than anything else.
                     </p>
                 </div>
             </div>
-
-            <!--<div class="slide row" id="slide1">-->
-            <!--&lt;!&ndash;<div class="bgImg" id="ratRoomPic">&ndash;&gt;-->
-            <!--&lt;!&ndash;&lt;!&ndash;<img src="imgs/shupeBackground.jpg"/>&ndash;&gt;&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--<div class="bgPic">-->
-            <!--<img src="imgs/ratRoom.png">-->
-            <!--</div>-->
-            <!--<div class="intro col-md-4 col-sm-10 offset-sm-1">-->
-            <!--<p>Step into Rat’s bedroom and you quickly learn that this is a person not afraid of expressing themselves. This is the room of a musician, artist, child model, YouTuber, and budding entrepreneur for a small apparel company. </p>-->
-            <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="slide row" id="slide2">-->
-            <!--<div class="intro col-md-4 col-sm-10 offset-sm-1">-->
-            <!--<p>A guitar rests in the corner, waiting to be picked up. Clothes in bold colors and designs line the racks. But despite all of these avenues for expression, there is one deeply personal message that this performer wants heard more than anything else.</p>-->
-            <!--</div>-->
-            <!--<div class="fullscreen-bg">-->
-            <!--<video id="ratRoom" playsinline autoplay muted loop class="fullscreen-bg_video">-->
-            <!--<source src="./imgs/ratRoom.webm" type="video/webm">-->
-            <!--<source src="./imgs/ratRoom.mp4" type="video/mp4">-->
-            <!--</video>-->
-            <!--</div>-->
-            <!--</div>-->
-
         </div>
         <div class="section" id="section2">
             <div class="row">
@@ -85,7 +70,7 @@
                     <img src="imgs/audio.png" id="audioPlay1"/>
 
                 </div>
-                <div class="intro col-md-4 col-sm-12">
+                <div class="intro col-md-4 col-sm-12 ">
                     <p>“Our beautiful, unfortunately mismatched bodies are mangled with stab wounds, angry men’s fury,” declared Rat Gemmiti, now 20, in a poem delivered to high school peers in the student library. And with that, Rat, who grew up in New York City, told their high school and the world that they were non-binary transgender. It was January 16, 2015.</p>
                 </div>
             </div>
@@ -95,7 +80,7 @@
                 <div class="intro col-md-4 col-sm-12 offset-md-1">
                     <p>Rat entered a new world of self-awareness and discovery. No longer did Rat refer to themselves as “male” or “female.” Since that day, Rat has preferred the pronouns “they” or “them,” a practice that is common among the increasing number of people who identify as non-binary.</p>
                 </div>
-                <div class="col-md-6 col-sm-12">
+                <div class="col-md-7 col-sm-12">
                     <video id="bothRat" playsinline autoplay muted loop>
                         <source src="./imgs/bothRat.webm" type="video/webm">
                         <source src="./imgs/bothRat.mp4" type="video/mp4">
@@ -129,6 +114,11 @@
         </div>
         <div class="section" id="section6">
             <div class="row">
+                <div class="intro col-sm-12 col-md-4 offset-md-1">
+                    <br> After coming out as non-binary, Rat named themselves after a Japanese animation character named Nezumi, which means “rat” in English. Rat describes their namesake as a “post-apocalyptic cross-dressing bad ass.”</br></br>
+                    “I figured I’d start with the name and go from there,” Rat said of aspiring to be a “bad ass” like Nezumi, adding that they took inspiration “from the first representation of people like me who don’t fit in a box.”</br></br>
+                    But getting to that place has not been easy. Rat has faced mental health issues because of their identity.</p>
+                </div>
                 <div class="col-md-6 col-sm-12">
                     <img src="imgs/rathead.png" class="head"/>
                     <audio id="ratComeout">
@@ -138,14 +128,10 @@
                         Your browser does not support the audio element.
                     </audio>
                     <img src="imgs/audio.png" id="audioPlay2"/>
-                </div>
-                <div class="intro col-sm-12 col-md-4">
-                    <br> After coming out as non-binary, Rat named themselves after a Japanese animation character named Nezumi, which means “rat” in English. Rat describes their namesake as a “post-apocalyptic cross-dressing bad ass.”</br></br>
-                    “I figured I’d start with the name and go from there,” Rat said of aspiring to be a “bad ass” like Nezumi, adding that they took inspiration “from the first representation of people like me who don’t fit in a box.”</br></br>
-                    But getting to that place has not been easy. Rat has faced mental health issues because of their identity.</p>
-                </div>
-                <div class="leftBottomPic">
-                    <img src="imgs/nezumi2.jpg" id="nezumi"/>
+                    <div class="leftBottomPic">
+                        <img src="imgs/nezumi2.jpg" id="nezumi"/>
+                        <!--<p class="nb-Caption">Rat was inspired by Nezumi, a Japanese animation character.</p>-->
+                    </div>
                 </div>
             </div>
         </div>
@@ -204,10 +190,7 @@
 
         <div class="section" id="section9">
             <div class="row">
-                <div class="col-md-4 offset-md-1 col-sm-12">
-                    <img class="fullPic" src="imgs/ShupeX.jpg"/>
-                </div>
-                <div class="intro col-md-4 col-sm-12">
+                <div class="intro col-md-4 col-sm-12 offset-md-7">
                     <p>
                         Having spent 18 years living in fear about who they are, Shupe understands what it’s like to be on the receiving end of discrimination for being gay and trans, especially in the military.<br/><br/>
                         Shupe has leveraged their experience into activism. They filed the petition for changing their gender to non-binary on April 27, 2016 and became the first person in the United States who was legally recognized as a non-binary person on June 10, 2016.<br/><br/>

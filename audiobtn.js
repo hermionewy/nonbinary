@@ -113,11 +113,6 @@ function audioBtn() {
             }
         });
     }
-    exports.playObj=function (_) {
-        if(!arguments.length){ return 0; }
-        playObj = document.getElementById(_);
-        return this;
-    }
     exports.audioObj=function (_) {
         if(!arguments.length){ return 0; }
         audioObj = document.getElementById(_);

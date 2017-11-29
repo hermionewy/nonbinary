@@ -2,18 +2,6 @@
 	-webkit-overflow-scrolling: touch;
 }
 
-.intro h1{
-	font-size: 3.5rem;
-	/*font-family: "BentonSansComp", 'helvetica', 'arial';*/
-	font-family: 'Reenie Beanie', cursive;
-	font-weight: bold;
-	color: #000;
-	padding:1rem;
-	background-color: rgba(255,255,255, 0.8);
-
-	border-left: 0.5rem solid #8d529d;
-}
-
 .subtitle{
 	font-size: 1rem;
 	/*font-family: 'Lato', sans-serif;*/
@@ -255,19 +243,14 @@ div.container-fluid{
 	background-image: url("./imgs/ratMirror.png");
 }
 #shupeDMVbg{
-	background-image: url("./imgs/shupeDMVbg.jpg");
+	background-image: url("./imgs/ShupeX.jpg");
+	background-position: top;
 }
 #shupePride{
 	background-image: url("./imgs/shupePride.jpg");
 	background-position: top;
 }
 
-.leftBottomPic{
-	position: absolute;
-	bottom: 1%;
-	left: 1%;
-
-}
 @media only screen and (max-width: 800px){
 	html, body{
 		font-size: 80%
@@ -275,6 +258,9 @@ div.container-fluid{
 }
 .fp-controlArrow.fp-next{
 	opacity: 0;
+}
+#bouncyArrow1{
+	opacity: 0.7
 }
 /*.ratQuote{*/
 	/*font-family: 'Zeyada', cursive;*/
@@ -284,3 +270,111 @@ div.container-fluid{
 	/*font-family: 'Reenie Beanie', cursive;*/
 	/*font-size: 1.2rem;*/
 /*}*/
+
+
+a { color: white; text-decoration: none; }
+
+.arrow {
+	position: absolute;
+	bottom: 100px;
+	left: 50%;
+	/*margin: 8% 0;*/
+	z-index: 1000;
+}
+.bounce {
+	-webkit-animation-delay: 5s; /* Safari 4.0 - 8.0 */
+	animation-delay: 5s;
+	-moz-animation: bounce 2s infinite;
+	-webkit-animation: bounce 2s infinite;
+	animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+		transform: translateY(0);
+	}
+	40% {
+		transform: translateY(-30px);
+	}
+	60% {
+		transform: translateY(-15px);
+	}
+}
+.scrollTip{
+	color: white;
+	font-family: Helvetica;
+	font-size: 0.9rem;
+	font-weight: 100;
+}
+#nezumi{
+	width: 250px;
+	z-index: -100;
+	float: right;
+}
+
+
+
+@media screen and (max-width:990px){
+
+}
+@media screen and (max-height:770px){
+
+}
+@media screen and (max-height:680px){
+
+}
+@media screen and (max-height:580px){
+
+}
+@media screen and (max-height:480px){
+
+}
+@media all and (max-width:900px){
+
+}
+
+@media all and (max-width:890px){
+
+
+
+}
+
+@media all and (max-width:650px){
+
+}
+@media all and (max-width:580px){
+
+}
+@media all and (max-width:480px){
+
+}
+@media all and (max-width:450px){
+
+}
+@media screen and (max-width:890px) and (max-height:680px){
+
+}
+@media screen and (max-width:650px) and (max-height:680px){
+
+}
+@media screen and (max-width:580px) and (max-height:580px){
+
+}
+@media screen and (max-width:500px) and (max-height:500px){
+
+}
+
+#nb-title{
+	/*font-family: "BentonSansComp", 'helvetica', 'arial';*/
+	position: absolute;
+	font-family: 'Reenie Beanie', cursive;
+	font-size: 1.5rem;
+	color: #000;
+	padding:1rem;
+	background-color: rgba(255,255,255, 0.8);
+	border-left: 0.5rem solid #8d529d;
+}
+h1{
+	font-size: 3.5rem;
+	font-weight: bold;
+}

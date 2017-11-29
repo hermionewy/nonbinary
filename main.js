@@ -7,10 +7,13 @@ $(document).ready(function() {
     var videoBeautiful = document.getElementById('ratBeautiful');
     var audioHope = document.getElementById('ratHope');
     var audioFuture = document.getElementById('ratFuture');
+    var bouncyArrow =  document.getElementById('bouncyArrow1');
+
+    var anchorsLink = ['1stPage', '2ndPage', '3rdPage','4thPage','5thPage','6thPage','7thPage',
+        '8thPage','9thPage','10thPage','11thPage','12thPage','13thPage','14thPage','15thPage'];
 
     $('#fullpage').fullpage({
-        anchors: ['1stPage', '2ndPage', '3rdPage','4thPage','5thPage','6thPage','7thPage',
-            '8thPage','9thPage','10thPage','11thPage','12thPage','13thPage','14thPage','15thPage'],
+        anchors: anchorsLink,
         // sectionsColor: ['#000', '#fff', '#fff'],
         scrollingSpeed: 1000,
         navigation: true,
@@ -19,11 +22,14 @@ $(document).ready(function() {
         autoScrolling: true,
         fitToSection: true,
         scrollOverflow: false,
+        fixedElements:'#bouncyArrow1',
+        bigSectionsDestination: 'top',
         navigationTooltips: ['Start', 'Second page', 'Third page', 'Forth Page', 'Fifth Page', 'Sixth Page','Seventh Page',
             'Eighth Page','Ninth Page','10th Page','11th Page','12th Page','13th Page','14th Page','End'],
         afterLoad: function(anchorLink, index){
             if(index==1){
                 videoOpen.play();
+                bouncyArrow.style.opacity = 1;
             }
             if(index==2){
                 console.log('ratRoom show!');
@@ -51,10 +57,12 @@ $(document).ready(function() {
             }
             if(index==14){
                 videoBeautiful.play();
+                bouncyArrow.style.opacity = 1;
             }
             if(index==15){
                 $('#audioPlay5').attr('src','./imgs/audioplay.png');
                 audioFuture.play();
+                bouncyArrow.style.opacity = 0;
             }
 
         },
@@ -87,6 +95,7 @@ $(document).ready(function() {
             if(index=15){
                 audioFuture.currentTime =0;
             }
+
         },
         // afterSlideLoad: function (anchorLink, slideIndex) {
         //     if(slideIndex==1){
@@ -101,6 +110,19 @@ $(document).ready(function() {
         }
 
     });
+
+    // bouncyArrow.addEventListener("click", function () {
+    //     console.log('clicked');
+    //     var linkElement = document.getElementById('arrowNext');
+    //     var getHref = linkElement.getAttribute('href').split('#')[1];
+    //     var index = anchorsLink.indexOf(getHref);
+    //     console.log(getHref);
+    //     console.log(index);
+    //     document.getElementById('arrowNext').setAttribute('href','#'+anchorsLink[index+1]);
+    // });
+    //
+
+
 
     $('#audioPlay1').on('click', function () {
             if(isPlaying('ratPoem_body')){

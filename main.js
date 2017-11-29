@@ -22,7 +22,7 @@ $(document).ready(function() {
         autoScrolling: true,
         fitToSection: true,
         scrollOverflow: false,
-        fixedElements:'#bouncyArrow1，#nb-note',
+        fixedElements:'#bouncyArrow1，#nb-note, #nb-audiobtn',
         bigSectionsDestination: 'top',
         navigationTooltips: ['Start', 'Second page', 'Third page', 'Forth Page', 'Fifth Page', 'Sixth Page','Seventh Page',
             'Eighth Page','Ninth Page','10th Page','11th Page','12th Page','13th Page','14th Page','End'],

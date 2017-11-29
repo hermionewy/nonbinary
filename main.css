@@ -409,3 +409,23 @@ h1{
 	-webkit-transform: translate(31rem,0);
 	transform: translate(31rem,0);
 }
+#nb-audiobtn{
+	width: 50px;
+	height: 50px;
+	z-index: 1000;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+#playable .control { opacity: 0; /* transition: opacity .2s linear; */ }
+#playable.not-started .play, #playable.paused .play { opacity: 1; }
+#playable.playing .pause { opacity: 1; }
+#playable.ended .stop {opacity: 1; }
+#playable.precache-bar .done {opacity: 0; }
+#playable.not-started .progress-bar, #playable.ended .progress-bar { display: none; }
+#playable.ended .progress-track { stroke-opacity: 1; }
+#playable .progress-bar,
+#playable .precache-bar {
+	stroke-dasharray: 298.1371428256714;
+	stroke-dashoffset: 298.1371428256714;
+}

@@ -87,6 +87,7 @@ function audioBtn() {
 // doo doo doo don't mind me, this code does nothing yet ...
         }
 // idea:
+        //var blue ='#0000ff';
 // use polar co ordinate conversion and convert the position as a percentage of 360 degrees... and draw it as an arc rather than a circle
 // rather than extending the length of the dash
 // http://stackoverflow.com/a/24569190/1238884

@@ -22,7 +22,7 @@ $(document).ready(function() {
         autoScrolling: true,
         fitToSection: true,
         scrollOverflow: false,
-        fixedElements:'#bouncyArrow1',
+        fixedElements:'#bouncyArrow1，#nb-note',
         bigSectionsDestination: 'top',
         navigationTooltips: ['Start', 'Second page', 'Third page', 'Forth Page', 'Fifth Page', 'Sixth Page','Seventh Page',
             'Eighth Page','Ninth Page','10th Page','11th Page','12th Page','13th Page','14th Page','End'],
@@ -42,6 +42,14 @@ $(document).ready(function() {
             }
             if(index ==4){
                 videoBoth.play();
+                $('#nb-btn1').on('click', function () {
+                    $('#nb-note').toggleClass('noteActive');
+                    console.log('toggleclass noteActive');
+                    $('.noteTitle').text('Non-binary');
+                    $('.noteText').text('“Non-binary” is a term unfamiliar to many, but it has been adopted by a subset of transgender people who identify as neither male or female, or both male and female at the same time. Actresses like Caitlyn Jenner and Laverne Cox have helped bring the transgender community into the spotlight, paving the way for greater acceptance of their identities, but non-binary is a category much less well-known or understood.');
+                });
+
+
             }
             if(index==7){
                 $('#audioPlay2').attr('src','./imgs/audioplay.png');
@@ -50,6 +58,16 @@ $(document).ready(function() {
             if(index==9){
                 $('#audioPlay3').attr('src','./imgs/audioplay.png');
                 document.getElementById('ratMisd').play();
+                $('#nb-btn2').on('click', function () {
+                    $('#nb-note').toggleClass('noteActive');
+                    console.log('toggleclass noteActive');
+                    $('.noteTitle').text('Mental health of the non-binary');
+                    $('.noteText').text('The U.S. Transgender Survey found that 39 percent of respondents experienced serious psychological distress, compared with 5 percent of the U.S. population, ' +
+                        'and 40 percent of respondents attempted to commit suicide at some point in their lifetime, ' +
+                        'nearly nine times the rate for the non-transgender U.S. population. ' +
+                        'Though the survey only sampled 28,000 people, it is indicative of wider spread mental health struggles in the transgender population.');
+                });
+
             }
             if(index==12){
                 $('#audioPlay4').attr('src','./imgs/audioplay.png');
@@ -79,13 +97,24 @@ $(document).ready(function() {
             }
             if(index==4){
                 videoBoth.currentTime = 0;
+                console.log('left');
+                if($('#nb-note').hasClass('noteActive')){
+                    console.log('has class');
+                    $('#nb-note').removeClass('noteActive');
+                }
             }
             if(index==7){
                 document.getElementById('ratComeout').currentTime=0;
             }
             if(index==9){
+                console.log('left9');
                 document.getElementById('ratMisd').currentTime=0;
+                if($('#nb-note').hasClass('noteActive')){
+                    console.log('has class');
+                    $('#nb-note').removeClass('noteActive');
+                }
             }
+
             if(index=12){
                 audioHope.currentTime =0;
             }

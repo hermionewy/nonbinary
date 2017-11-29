@@ -378,3 +378,34 @@ h1{
 	font-size: 3.5rem;
 	font-weight: bold;
 }
+.nb-button{
+	padding: 0.2rem;
+	border: 1px black solid;
+	border-radius: 0.5rem;
+}
+.nb-button:hover{
+	background-color: gold;
+	cursor: pointer;
+}
+#nb-note{
+	position: absolute;
+	left: -30rem;
+	top: 1rem;
+	max-width: 30rem;
+	min-height: 10rem;
+	background-color: white;
+	opacity: 0.9;
+	border: 1px black solid;
+	-webkit-transition: 1s ease-in-out;
+	transition: 1s ease-in-out;
+	z-index: 1000;
+	font-size:0.8rem;
+	font-family: Helvetica, Arial;
+	font-weight: 100;
+	padding: 1rem;
+}
+
+.noteActive{
+	-webkit-transform: translate(31rem,0);
+	transform: translate(31rem,0);
+}

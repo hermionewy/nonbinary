@@ -1,8 +1,8 @@
 function audioBtn() {
     console.log("testAudio");
     var playObj = document.getElementById("playable");
-    var audioObj = document.getElementById("listen");
-    audioObj.setAttribute("src", "imgs/ratPoem_body.mp3");
+    // var audioObj = document.getElementById("listen");
+    // audioObj.setAttribute("src", "imgs/ratPoem_body.mp3");
 
     function exports() {
         var progress = playObj.querySelector(".progress-bar"),
@@ -71,10 +71,14 @@ function audioBtn() {
                 if (obj===progress) lunar.className(playObj, "ended");
             }
         }
-        audioObj.addEventListener('progress', function() {
-            var end = audioObj.buffered.end(audioObj.buffered.length - 1);
-            setGraphValue(precache, end);
-        });
+        audioObj.addEventListener('progress', onProgress);
+
+        function onProgress() {
+            if(audioObj.onprogress){
+                var end = audioObj.buffered.end(audioObj.buffered.length - 1);
+            setGraphValue(precache, end);}
+        }
+
         function reportPosition() {
             setGraphValue(progress, audioObj.currentTime);
         }

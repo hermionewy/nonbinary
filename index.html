@@ -6,7 +6,6 @@
     <title>Nonbinary</title>
     <meta name="author" content="Yan Wu" />
     <meta name="description" content="fullPage plugin by Alvaro Trigo. Create fullscreen pages fast and simple. One page scroll sections jquery plugin. Mouse snap." />
-    <meta name="keywords"  content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,snap,snapping,apple,scroll,sections" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./vendor/jquery.fullpage.css" />
@@ -22,27 +21,30 @@
 <div id="nb-audiobtn">
     <svg id="playable" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" class="not-started">
         <g class="shape">
-            <circle class="progress-track" cx="50" cy="50" r="47.45" stroke="#0077B7" stroke-opacity="0.25" stroke-linecap="round" fill="none" stroke-width="3" />
-            <circle class="precache-bar" cx="50" cy="50" r="47.45" stroke="#0077B7" stroke-opacity="0.25" stroke-linecap="round" fill="none" stroke-width="3" transform="rotate(-90 50 50)" />
-            <circle class="progress-bar" cx="50" cy="50" r="47.45" stroke="gold" stroke-opacity="1" stroke-linecap="round" fill="none" stroke-width="3" transform="rotate(-90 50 50)" />
+            <circle class="progress-track" cx="50" cy="50" r="47.45" stroke="#aaaaaa" stroke-opacity="0.25" stroke-linecap="round" fill="none" stroke-width="6" />
+            <circle class="precache-bar" cx="50" cy="50" r="47.45" stroke="#aaaaaa" stroke-opacity="0.25" stroke-linecap="round" fill="none" stroke-width="6" transform="rotate(-90 50 50)" />
+            <circle class="progress-bar" cx="50" cy="50" r="47.45" stroke="gold" stroke-opacity="1" stroke-linecap="round" fill="none" stroke-width="6" transform="rotate(-90 50 50)" />
         </g>
         <circle class="controls" cx="50" cy="50" r="45" stroke="none" fill="#0077B7" opacity="0.0" pointer-events="all" />
         <g class="control pause">
-            <line x1="40" y1="35" x2="40" y2="65" stroke="gold" fill="none" stroke-width="3" stroke-linecap="round" />
-            <line x1="60" y1="35" x2="60" y2="65" stroke="gold" fill="none" stroke-width="3" stroke-linecap="round" />
+            <line x1="40" y1="35" x2="40" y2="65" stroke="gold" fill="none" stroke-width="6" stroke-linecap="round" />
+            <line x1="60" y1="35" x2="60" y2="65" stroke="gold" fill="none" stroke-width="6" stroke-linecap="round" />
         </g>
         <g class="control play">
-            <line x1="45" y1="35" x2="45" y2="65" stroke="#0077B7" fill="none" stroke-width="3" stroke-linecap="round" />
-            <line x1="45" y1="65" x2="65" y2="50" stroke="#0077B7" fill="none" stroke-width="3" stroke-linecap="round" />
-            <line x1="65" y1="50" x2="45" y2="35" stroke="#0077B7" fill="none" stroke-width="3" stroke-linecap="round" />
+            <line x1="45" y1="35" x2="45" y2="65" stroke="gold" fill="none" stroke-width="6" stroke-linecap="round" />
+            <line x1="45" y1="65" x2="65" y2="50" stroke="gold" fill="none" stroke-width="6" stroke-linecap="round" />
+            <line x1="65" y1="50" x2="45" y2="35" stroke="gold" fill="none" stroke-width="6" stroke-linecap="round" />
         </g>
         <g class="control stop">
-            <rect x="35" y="35" width="30" height="30" stroke="#0077B7" fill="none" stroke-width="3" />
+            <rect x="35" y="35" width="30" height="30" stroke="#aaaaaa" fill="none" stroke-width="6" />
         </g>
     </svg>
 </div>
 
 <div id="nb-note">
+    <div id="closeDiv">
+        <img src="imgs/close.png"/>
+    </div>
     <h4 class="noteTitle"></h4>
     <p class="noteText"></p>
 </div>
@@ -171,7 +173,7 @@
                     <p>
                         For others, identifying as non-binary didn’t come in a moment of epiphany. </br></br>
                         Shupe did not start exploring gender and sexual orientation until their 50s. “Both my mother and the U.S. military were highly abusive, punishing, and hostile” when facing Shupe’s sexuality and gender, they said.</br></br>
-                        After hormone treatments, Shupe grew breasts, achieving a “little piece of womanhood.” But after living as a transgender female for three and a half years, Shupe concluded that they didn’t identify with the binary definitions of gender, and that they are a “mixture of the two sexes.”</br></br>
+                        After hormone treatments, Shupe grew breasts, achieving a “little piece of womanhood.” But after living as a transgender female for three years, Shupe concluded that they didn’t identify with the binary definitions of gender, and that they are a “mixture of the two sexes.”</br></br>
                         This realization was painful and caused new concerns. “As part of the LGBT community, I feel like I have to be hyper-vigilant and alert for danger in public,” Shupe explained. Shupe has been treated for PTSD and gender dysphoria.
                     </p>
                 </div>
@@ -243,7 +245,7 @@
                 <div class="col-md-6 col-sm-12">
                     <img class="fullPic" src="imgs/ratWalk.png"/>
                 </div>
-                <div class="intro col-md-4 col-sm-12">
+                <div class="intro col-md-4 col-sm-12 offset-md-1">
                     <div class="col-12">
                         <img src="imgs/rathead.png" class="head"/>
                         <audio id="ratHope">
@@ -264,7 +266,7 @@
         </div>
         <div class="section" id="section12">
             <div class="row">
-                <div class="intro col-md-4 offset-md-6 col-sm-12">
+                <div class="intro col-md-4 offset-md-7 col-sm-12">
                     <p>
                         Shupe has another perspective. “Our population group has received zero representation from the trans legal organizations. They’re instead filing lawsuits for binary bathroom access to affirm their binary trans identities,” they said. When Shupe tried to fight their battle for a legal identity, they had to hire a private lawyer.<br/><br/>
                         “I broke the gender binary for $1,056,” Shupe said, referring to their legal fees.
@@ -346,28 +348,9 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script type="text/javascript" src="./vendor/jquery.fullPage.js"></script>
+<script src="audiobtn.js"></script>
 <script src="main.js"></script>
-<!--<script type="text/javascript">-->
-    <!--$(document).ready(function() {-->
-        <!--$('#fullpage').fullpage({-->
-            <!--sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],-->
-            <!--anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],-->
-            <!--menu: '#menu',-->
-            <!--css3: true,-->
-            <!--scrollingSpeed: 1000-->
-        <!--});-->
 
-        <!--$('#showExamples').click(function(e){-->
-            <!--e.stopPropagation();-->
-            <!--e.preventDefault();-->
-            <!--$('#examplesList').toggle();-->
-        <!--});-->
-
-        <!--$('html').click(function(){-->
-            <!--$('#examplesList').hide();-->
-        <!--});-->
-    <!--});-->
-<!--</script>-->
 
 </body>
 </html>

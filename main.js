@@ -12,13 +12,16 @@ $(document).ready(function() {
     var anchorsLink = ['1stPage', '2ndPage', '3rdPage','4thPage','5thPage','6thPage','7thPage',
         '8thPage','9thPage','10thPage','11thPage','12thPage','13thPage','14thPage','15thPage'];
 
+
+    // var testAudio = audioBtn().audioObj('ratDressVideo').setAudioAttr('./imgs/ratDress.webm');
+    // testAudio();
+
     $('#fullpage').fullpage({
         anchors: anchorsLink,
         // sectionsColor: ['#000', '#fff', '#fff'],
         scrollingSpeed: 1000,
         navigation: true,
         navigationPosition: 'right',
-        showActiveTooltip: true,
         autoScrolling: true,
         fitToSection: true,
         scrollOverflow: false,
@@ -30,6 +33,7 @@ $(document).ready(function() {
             if(index==1){
                 videoOpen.play();
                 bouncyArrow.style.opacity = 1;
+                $('#nb-title').addClass('leftDivActive');
             }
             if(index==2){
                 console.log('ratRoom show!');
@@ -68,9 +72,11 @@ $(document).ready(function() {
             }
 
         },
-        onLeave: function (anchorLink, index) {
+        onLeave: function (index, nextIndex, direction) {
             if(index==1){
+                console.log('index1 left');
                 videoOpen.currentTime = 0;
+                $('#nb-title').removeClass('leftDivActive');
             }
             if(index==2){
                 videoRoom.currentTime = 0;
@@ -160,6 +166,9 @@ $(document).ready(function() {
                 this.src='./imgs/audioplay.png';
                 document.getElementById('ratPoem_body').play()
             }
+    });
+    $('#closeDiv').on('click', function () {
+        $('#nb-note').toggleClass('noteActive');
     });
 
     $('#audioPlay2').on('click', function () {

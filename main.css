@@ -365,7 +365,6 @@ a { color: white; text-decoration: none; }
 }
 
 #nb-title{
-	/*font-family: "BentonSansComp", 'helvetica', 'arial';*/
 	position: absolute;
 	font-family: 'Reenie Beanie', cursive;
 	font-size: 1.5rem;
@@ -373,7 +372,15 @@ a { color: white; text-decoration: none; }
 	padding:1rem;
 	background-color: rgba(255,255,255, 0.8);
 	border-left: 0.5rem solid #8d529d;
+	left: -40rem;
+	-webkit-transition: 2s ease-in-out;
+	transition: 2s ease-in-out;
 }
+.leftDivActive{
+	-webkit-transform: translate(42rem,0);
+	transform: translate(42rem,0);
+}
+
 h1{
 	font-size: 3.5rem;
 	font-weight: bold;
@@ -389,9 +396,9 @@ h1{
 }
 #nb-note{
 	position: absolute;
-	left: -30rem;
+	left: -25.5rem;
 	top: 1rem;
-	max-width: 30rem;
+	max-width: 25rem;
 	min-height: 10rem;
 	background-color: white;
 	opacity: 0.9;
@@ -406,8 +413,13 @@ h1{
 }
 
 .noteActive{
-	-webkit-transform: translate(31rem,0);
-	transform: translate(31rem,0);
+	-webkit-transform: translate(26rem,0);
+	transform: translate(26rem,0);
+}
+#closeDiv{
+	position: absolute;
+	right: 5px;
+	top:5px;
 }
 #nb-audiobtn{
 	width: 50px;

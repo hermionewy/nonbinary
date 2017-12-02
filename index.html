@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./vendor/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="main.css" />
 
-    <!--<link rel="stylesheet" type="text/css" href="mainNew.css"/>-->
 
 </head>
 
@@ -25,7 +24,7 @@
             <circle class="precache-bar" cx="50" cy="50" r="47.45" stroke="#aaaaaa" stroke-opacity="0.25" stroke-linecap="round" fill="none" stroke-width="6" transform="rotate(-90 50 50)" />
             <circle class="progress-bar" cx="50" cy="50" r="47.45" stroke="gold" stroke-opacity="1" stroke-linecap="round" fill="none" stroke-width="6" transform="rotate(-90 50 50)" />
         </g>
-        <circle class="controls" cx="50" cy="50" r="45" stroke="none" fill="#0077B7" opacity="0.0" pointer-events="all" />
+        <circle id="clickbtn" class="controls" cx="50" cy="50" r="50" stroke="none" fill="#0077B7" opacity="0.0" pointer-events="all" />
         <g class="control pause">
             <line x1="40" y1="35" x2="40" y2="65" stroke="gold" fill="none" stroke-width="6" stroke-linecap="round" />
             <line x1="60" y1="35" x2="60" y2="65" stroke="gold" fill="none" stroke-width="6" stroke-linecap="round" />
@@ -38,6 +37,7 @@
         <g class="control stop">
             <rect x="35" y="35" width="30" height="30" stroke="#aaaaaa" fill="none" stroke-width="6" />
         </g>
+        <use xlink:href="#clickbtn" />
     </svg>
 </div>
 
@@ -48,6 +48,12 @@
     <h4 class="noteTitle"></h4>
     <p class="noteText"></p>
 </div>
+
+<audio id="ratAllAudio">
+    <source id="ratAudioSource" src="">
+    Your browser doesn't support the audio.
+</audio>
+
 <div id="fullpage">
     <div class="container-fluid">
         <video poster="./imgs/widePlaceholder.png" id="ratDressVideo" playsinline autoplay muted loop>
@@ -96,7 +102,6 @@
                         <!--<source src="http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg" />-->
                         Your browser does not support the audio element.
                     </audio>
-                    <img src="imgs/audio.png" id="audioPlay1"/>
 
                 </div>
                 <div class="intro col-md-4 col-sm-12 ">
@@ -156,7 +161,6 @@
                         <!--<source src="http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg" />-->
                         Your browser does not support the audio element.
                     </audio>
-                    <img src="imgs/audio.png" id="audioPlay2"/>
                     <div class="leftBottomPic">
                         <img src="imgs/nezumi2.jpg" id="nezumi"/>
                         <!--<p class="nb-Caption">Rat was inspired by Nezumi, a Japanese animation character.</p>-->
@@ -197,7 +201,6 @@
                             <!--<source src="http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg" />-->
                             Your browser does not support the audio element.
                         </audio>
-                        <img src="imgs/audio.png" id="audioPlay3"/>
                     </div>
                     <p>Rat has met many people who try to convince them that they are not transgender, just mentally ill. <br/></br>
 
@@ -254,7 +257,6 @@
                             <!--<source src="http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg" />-->
                             Your browser does not support the audio element.
                         </audio>
-                        <img src="imgs/audio.png" id="audioPlay4"/>
                     </div>
                     <p>
                         Rat has also been the target of hostility.<br/><br/>
@@ -308,7 +310,6 @@
                         <!--<source src="http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg" />-->
                         Your browser does not support the audio element.
                     </audio>
-                    <img src="imgs/audio.png" id="audioPlay5"/>
                 </div>
                 <div class="intro col-md-6 col-sm-12">
                     <p>
@@ -349,7 +350,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script type="text/javascript" src="./vendor/jquery.fullPage.js"></script>
 <script src="audiobtn.js"></script>
-<script src="main.js"></script>
+<script src="mainAudio.js"></script>
 
 
 </body>

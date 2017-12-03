@@ -13,6 +13,13 @@ $(document).ready(function() {
         '8thPage','9thPage','10thPage','11thPage','12thPage','13thPage','14thPage','15thPage'];
 
 
+    var allAudio = document.getElementById('ratAllAudio'),
+        allAudioSrc = document.getElementById('ratAudioSource');
+
+    $('#nb-audiobtn').css( "opacity", 0);
+
+
+
     // var testAudio = audioBtn().audioObj('ratDressVideo').setAudioAttr('./imgs/ratDress.webm');
     // testAudio();
 
@@ -25,7 +32,7 @@ $(document).ready(function() {
         autoScrolling: true,
         fitToSection: true,
         scrollOverflow: false,
-        fixedElements:'#bouncyArrow1，#nb-note, #nb-audiobtn',
+        fixedElements:'#bouncyArrow1，#nb-note, #nb-audiobtn, #menuToggle',
         bigSectionsDestination: 'top',
         navigationTooltips: ['Start', 'Second page', 'Third page', 'Forth Page', 'Fifth Page', 'Sixth Page','Seventh Page',
             'Eighth Page','Ninth Page','10th Page','11th Page','12th Page','13th Page','14th Page','End'],
@@ -37,38 +44,65 @@ $(document).ready(function() {
             }
             if(index==2){
                 console.log('ratRoom show!');
+                $('#section1 .intro').fadeIn(1500);
                 videoRoom.play();
             }
             if(index == 3){
-
-                $('#audioPlay1').attr('src','./imgs/audioplay.png');
-                document.getElementById('ratPoem_body').play();
+                $('#nb-audiobtn').css( "opacity", 1);
+                var testAudio = audioBtn().setAudioAttr('./imgs/ratPoem_body.webm');
+                testAudio();
             }
             if(index ==4){
                 videoBoth.play();
             }
+            if(index ==5){
+                $('#section4 .intro').fadeIn(1500);
+            }
+            if(index ==6){
+                $('#section5 .intro').fadeIn(1500);
+            }
             if(index==7){
-                $('#audioPlay2').attr('src','./imgs/audioplay.png');
-                document.getElementById('ratComeout').play();
+                $('#nb-audiobtn').css( "opacity", 1);
+                //document.getElementById('ratComeout').play();
+                var testAudio = audioBtn().setAudioAttr('./imgs/ratComeout.webm');
+                testAudio();
+            }
+            if(index==8){
+                $('#section7 .intro').fadeIn(1500);
             }
             if(index==9){
-                $('#audioPlay3').attr('src','./imgs/audioplay.png');
-                document.getElementById('ratMisd').play();
-
-
+                $('#section8 .intro').fadeIn(1500);
+                $('#nb-audiobtn').css( "opacity", 1);
+                var testAudio = audioBtn().setAudioAttr('./imgs/rat_Misunderstanding.webm');
+                testAudio();
+                //document.getElementById('ratMisd').play();
+            }
+            if(index==10){
+                $('#section9 .intro').fadeIn(1500);
             }
             if(index==12){
-                $('#audioPlay4').attr('src','./imgs/audioplay.png');
-                audioHope.play();
+                $('#nb-audiobtn').css( "opacity", 1);
+                var testAudio = audioBtn().setAudioAttr('./imgs/ratHope.webm');
+                testAudio();
+                //audioHope.play();
+            }
+            if(index==13){
+                $('#section12 .intro').fadeIn(1500);
             }
             if(index==14){
-                videoBeautiful.play();
-                bouncyArrow.style.opacity = 1;
+                $('#section13 .intro').fadeIn(1500);
+                 videoBeautiful.play();
+                // $('#nb-audiobtn').css( "opacity", 1);
+                // var testAudio = audioBtn().setAudioAttr('./imgs/ratBeautiful.webm');
+                // testAudio();
+                // bouncyArrow.style.opacity = 1;
             }
             if(index==15){
-                $('#audioPlay5').attr('src','./imgs/audioplay.png');
-                audioFuture.play();
-                bouncyArrow.style.opacity = 0;
+                $('#nb-audiobtn').css( "opacity", 1);
+                var testAudio = audioBtn().setAudioAttr('./imgs/ratFuture.webm');
+                testAudio();
+                //audioFuture.play();
+                // bouncyArrow.style.opacity = 0;
             }
 
         },
@@ -79,11 +113,15 @@ $(document).ready(function() {
                 $('#nb-title').removeClass('leftDivActive');
             }
             if(index==2){
+                $('#section1 .intro').fadeOut();
                 videoRoom.currentTime = 0;
             }
             if(index==3){
-                document.getElementById('ratPoem_body').currentTime = 0;
-                document.getElementById('audioPlay1').src='./imgs/audio.png';
+                $('#nb-audiobtn').css( "opacity", 0);
+                // document.getElementById('ratPoem_body').currentTime = 0;
+                // document.getElementById('audioPlay1').src='./imgs/audio.png';
+                allAudio.pause();
+                allAudio.currentTime =0;
             }
             if(index==4){
                 videoBoth.currentTime = 0;
@@ -93,42 +131,74 @@ $(document).ready(function() {
                     $('#nb-note').removeClass('noteActive');
                 }
             }
+            if(index ==5){
+                $('#section4 .intro').fadeOut();
+            }
+            if(index ==6){
+                $('#section5 .intro').fadeOut();
+            }
             if(index==7){
-                document.getElementById('ratComeout').currentTime=0;
+                // document.getElementById('ratComeout').currentTime=0;
+                $('#nb-audiobtn').css( "opacity", 0);
+                allAudio.pause();
+                allAudio.currentTime =0;
+            }
+            if(index==8){
+                $('#section7 .intro').fadeOut();
             }
             if(index==9){
+                $('#section8 .intro').fadeOut();
                 console.log('left9');
-                document.getElementById('ratMisd').currentTime=0;
+                allAudio.pause();
+                allAudio.currentTime =0;
+                $('#nb-audiobtn').css( "opacity", 0);
+                // document.getElementById('ratMisd').currentTime=0;
                 if($('#nb-note').hasClass('noteActive')){
                     console.log('has class');
                     $('#nb-note').removeClass('noteActive');
                 }
             }
-
+            if(index==10){
+                $('#section9 .intro').fadeOut();
+            }
             if(index=12){
-                audioHope.currentTime =0;
+                $('#nb-audiobtn').css( "opacity", 0);
+                allAudio.pause();
+                allAudio.currentTime =0;
+                // audioHope.currentTime =0;
+            }
+            if(index==13){
+                $('#section12 .intro').fadeOut();
             }
             if(index=14){
+                $('#section13 .intro').fadeOut();
+                // allAudio.currentTime =0;
                 videoBeautiful.currentTime =0;
             }
             if(index=15){
-                audioFuture.currentTime =0;
+                $('#nb-audiobtn').css( "opacity", 0);
+                allAudio.pause();
+                allAudio.currentTime =0;
+                // audioFuture.currentTime =0;
             }
-
         },
-        // afterSlideLoad: function (anchorLink, slideIndex) {
-        //     if(slideIndex==1){
-        //         videoRoom.play();
-        //     } else{
-        //         videoRoom.currentTime = 0;
-        //     }
-        // },
-        //responsiveWidth: 900,
+
         afterResponsive: function(isResponsive){
 
         }
 
     });
+
+    // bouncyArrow.addEventListener("click", function () {
+    //     console.log('clicked');
+    //     var linkElement = document.getElementById('arrowNext');
+    //     var getHref = linkElement.getAttribute('href').split('#')[1];
+    //     var index = anchorsLink.indexOf(getHref);
+    //     console.log(getHref);
+    //     console.log(index);
+    //     document.getElementById('arrowNext').setAttribute('href','#'+anchorsLink[index+1]);
+    // });
+    //
 
     $('#nb-btn1').on('click', function () {
         $('#nb-note').toggleClass('noteActive');
@@ -196,7 +266,13 @@ $(document).ready(function() {
             document.getElementById('ratFuture').play()
         }
     });
-
+    $('#section13').on('click', function () {
+        var myVideo = document.getElementById('ratBeautiful');
+        if (myVideo.paused)
+            myVideo.play();
+        else
+            myVideo.pause();
+    });
 
     document.getElementById('ratPoem_body').addEventListener("ended", function(){
         this.currentTime = 0;

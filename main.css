@@ -199,13 +199,7 @@ div.container-fluid{
 	transition: 1s opacity;
 	overflow:hidden;
 }
-#section14{
-	background-color: black;
-}
-#section14 .intro p{
-	color:white;
-	background-color: rgba(0,0,0,.3);
-}
+
 #shupeHead{
 	width:120px;
 	horiz-align: center;
@@ -472,4 +466,8 @@ h1{
 }
 #note-image{
 	width: 100%;
+}
+.endQuote{
+	font-family: 'Reenie Beanie', cursive;
+	font-size: 1.5rem;
 }

@@ -130,17 +130,6 @@ $(document).ready(function() {
 
     });
 
-    // bouncyArrow.addEventListener("click", function () {
-    //     console.log('clicked');
-    //     var linkElement = document.getElementById('arrowNext');
-    //     var getHref = linkElement.getAttribute('href').split('#')[1];
-    //     var index = anchorsLink.indexOf(getHref);
-    //     console.log(getHref);
-    //     console.log(index);
-    //     document.getElementById('arrowNext').setAttribute('href','#'+anchorsLink[index+1]);
-    // });
-    //
-
     $('#nb-btn1').on('click', function () {
         $('#nb-note').toggleClass('noteActive');
         console.log('toggleclass noteActive');

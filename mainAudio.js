@@ -44,6 +44,7 @@ $(document).ready(function() {
             }
             if(index==2){
                 console.log('ratRoom show!');
+                $('#section1 .intro').fadeIn(2000);
                 videoRoom.play();
             }
             if(index == 3){
@@ -54,17 +55,30 @@ $(document).ready(function() {
             if(index ==4){
                 videoBoth.play();
             }
+            if(index ==5){
+                $('#section4 .intro').fadeIn(2000);
+            }
+            if(index ==6){
+                $('#section5 .intro').fadeIn(2000);
+            }
             if(index==7){
                 $('#nb-audiobtn').css( "opacity", 1);
                 //document.getElementById('ratComeout').play();
                 var testAudio = audioBtn().setAudioAttr('./imgs/ratComeout.webm');
                 testAudio();
             }
+            if(index==8){
+                $('#section7 .intro').fadeIn(2000);
+            }
             if(index==9){
+                $('#section8 .intro').fadeIn(2000);
                 $('#nb-audiobtn').css( "opacity", 1);
                 var testAudio = audioBtn().setAudioAttr('./imgs/rat_Misunderstanding.webm');
                 testAudio();
                 //document.getElementById('ratMisd').play();
+            }
+            if(index==10){
+                $('#section9 .intro').fadeIn(2000);
             }
             if(index==12){
                 $('#nb-audiobtn').css( "opacity", 1);
@@ -72,13 +86,20 @@ $(document).ready(function() {
                 testAudio();
                 //audioHope.play();
             }
+            if(index==13){
+                $('#section12 .intro').fadeIn(2000);
+            }
             if(index==14){
-                videoBeautiful.play();
+                $('#section13 .intro').fadeIn(2000);
+                 videoBeautiful.play();
+                // $('#nb-audiobtn').css( "opacity", 1);
+                // var testAudio = audioBtn().setAudioAttr('./imgs/ratBeautiful.webm');
+                testAudio();
                 // bouncyArrow.style.opacity = 1;
             }
             if(index==15){
                 $('#nb-audiobtn').css( "opacity", 1);
-                var testAudio = audioBtn().setAudioAttr('./imgs/ratHope.webm');
+                var testAudio = audioBtn().setAudioAttr('./imgs/ratFuture.webm');
                 testAudio();
                 //audioFuture.play();
                 // bouncyArrow.style.opacity = 0;
@@ -92,6 +113,7 @@ $(document).ready(function() {
                 $('#nb-title').removeClass('leftDivActive');
             }
             if(index==2){
+                $('#section1 .intro').fadeOut();
                 videoRoom.currentTime = 0;
             }
             if(index==3){
@@ -109,13 +131,23 @@ $(document).ready(function() {
                     $('#nb-note').removeClass('noteActive');
                 }
             }
+            if(index ==5){
+                $('#section4 .intro').fadeOut();
+            }
+            if(index ==6){
+                $('#section5 .intro').fadeOut();
+            }
             if(index==7){
                 // document.getElementById('ratComeout').currentTime=0;
                 $('#nb-audiobtn').css( "opacity", 0);
                 allAudio.pause();
                 allAudio.currentTime =0;
             }
+            if(index==8){
+                $('#section7 .intro').fadeOut();
+            }
             if(index==9){
+                $('#section8 .intro').fadeOut();
                 console.log('left9');
                 allAudio.pause();
                 allAudio.currentTime =0;
@@ -126,14 +158,20 @@ $(document).ready(function() {
                     $('#nb-note').removeClass('noteActive');
                 }
             }
-
+            if(index==10){
+                $('#section9 .intro').fadeOut();
+            }
             if(index=12){
                 $('#nb-audiobtn').css( "opacity", 0);
                 allAudio.pause();
                 allAudio.currentTime =0;
                 // audioHope.currentTime =0;
             }
+            if(index==13){
+                $('#section12 .intro').fadeOut();
+            }
             if(index=14){
+                $('#section13 .intro').fadeOut();
                 // allAudio.currentTime =0;
                 videoBeautiful.currentTime =0;
             }
@@ -144,14 +182,7 @@ $(document).ready(function() {
                 // audioFuture.currentTime =0;
             }
         },
-        // afterSlideLoad: function (anchorLink, slideIndex) {
-        //     if(slideIndex==1){
-        //         videoRoom.play();
-        //     } else{
-        //         videoRoom.currentTime = 0;
-        //     }
-        // },
-        //responsiveWidth: 900,
+
         afterResponsive: function(isResponsive){
 
         }

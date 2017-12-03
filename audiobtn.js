@@ -8,7 +8,8 @@ function audioBtn() {
         var progress = playObj.querySelector(".progress-bar"),
             precache = playObj.querySelector(".precache-bar"),
             //controlsObbj =
-            controlsObj = playObj.querySelector(".controls"),
+            // controlsObj = playObj.querySelector("#clickbtn"),
+            // controlsObj = document.getElementById('#clickbtn'),
             pt = playObj.createSVGPoint(),
             pc = 298.1371428256714; // 2 pi r
 
@@ -96,7 +97,8 @@ function audioBtn() {
 // use polar co ordinate conversion and convert the position as a percentage of 360 degrees... and draw it as an arc rather than a circle
 // rather than extending the length of the dash
 // http://stackoverflow.com/a/24569190/1238884
-        controlsObj.addEventListener("click", function(e) {
+        $("#nb-audiobtn").unbind().on("click", function(e) {
+            console.log('clicked');
             switch (playObj.getAttribute("class")) {
                 case "not-started":
                     audioObj.addEventListener('timeupdate', reportPosition);

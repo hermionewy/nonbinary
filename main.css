@@ -169,8 +169,8 @@ div.container-fluid{
 	width:120px;
 }
 #section10{
-	background-color: black;
-	color:white;
+	/*background-color: black;*/
+	/*color:white;*/
 }
 .fullPic{
 	width: 100%;
@@ -181,10 +181,9 @@ div.container-fluid{
 	margin-top: 20%;
 }
 #section10 .intro p{
-	color:white;
-	background-color: rgba(0,0,0,.3);
-	position: absolute;
-	top:10%;
+	/*color:white;*/
+	/*background-color: rgba(0,0,0,.3);*/
+	/*position: absolute;*/
 }
 #ratBeautiful{
 	position: absolute;
@@ -307,7 +306,7 @@ a { color: white; text-decoration: none; }
 	font-weight: 100;
 }
 #nezumi{
-	width: 250px;
+	width: 100%;
 	z-index: -100;
 	float: right;
 }
@@ -424,11 +423,41 @@ h1{
 #nb-audiobtn{
 	width: 50px;
 	height: 50px;
-	z-index: 1000;
+	z-index: 2000;
 	position: absolute;
-	right: 5px;
-	top: 5px;
+	right: 30px;
+	top: 20px;
 }
+#section1 .intro{
+	display: none;
+}
+#section4 .intro{
+	display: none;
+}
+#section5 .intro{
+	display: none;
+ }
+#section7 .intro{
+	display: none;
+}
+#section8 .intro{
+	display: none;
+}
+#section9 .intro{
+	display: none;
+}
+#section12 .intro{
+	display: none;
+}
+#section13 .intro{
+	display: none;
+}
+#openNote{
+	font-family: Helvetica, Arial;
+	font-weight: 100;
+	font-size: 0.8rem;
+}
+
 #playable .control { opacity: 0; /* transition: opacity .2s linear; */ }
 #playable.not-started .play, #playable.paused .play { opacity: 1; }
 #playable.playing .pause { opacity: 1; }
@@ -440,4 +469,7 @@ h1{
 #playable .precache-bar {
 	stroke-dasharray: 298.1371428256714;
 	stroke-dashoffset: 298.1371428256714;
+}
+#note-image{
+	width: 100%;
 }

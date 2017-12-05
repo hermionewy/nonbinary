@@ -7,13 +7,9 @@ function audioBtn() {
     function exports() {
         var progress = playObj.querySelector(".progress-bar"),
             precache = playObj.querySelector(".precache-bar"),
-            //controlsObbj =
-            // controlsObj = playObj.querySelector("#clickbtn"),
-            // controlsObj = document.getElementById('#clickbtn'),
             pt = playObj.createSVGPoint(),
             pc = 298.1371428256714; // 2 pi r
 
-        console.log('control the audio');
         function cursorPoint(evt){
             pt.x = evt.clientX; pt.y = evt.clientY;
             return pt.matrixTransform(playObj.getScreenCTM().inverse());

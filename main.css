@@ -196,6 +196,7 @@ div.container-fluid{
 	/*transform: translateX(-50%) translateY(-50%);*/
 	background: url('./imgs/widePlaceholder.png') no-repeat;
 	background-size: cover;
+	background-position:center;
 	transition: 1s opacity;
 	overflow:hidden;
 }
@@ -328,8 +329,10 @@ a { color: white; text-decoration: none; }
 
 @media all and (max-width:890px){
 
-
-
+	#ratBeautiful{
+		position: absolute;
+		left: -650px;
+	}
 }
 
 @media all and (max-width:650px){
@@ -445,6 +448,8 @@ h1{
 }
 #section13 .intro{
 	display: none;
+	position: absolute;
+	bottom: 50px;
 }
 #openNote{
 	font-family: Helvetica, Arial;
@@ -464,10 +469,12 @@ h1{
 	stroke-dasharray: 298.1371428256714;
 	stroke-dashoffset: 298.1371428256714;
 }
-#note-image{
-	width: 100%;
-}
+
 .endQuote{
 	font-family: 'Reenie Beanie', cursive;
 	font-size: 1.5rem;
+}
+#note-content img{
+	padding:5px;
+	width: 100%;
 }

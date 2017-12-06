@@ -26,7 +26,7 @@ $(document).ready(function() {
     $('#fullpage').fullpage({
         anchors: anchorsLink,
         // sectionsColor: ['#000', '#fff', '#fff'],
-        scrollingSpeed: 1000,
+        scrollingSpeed: 1300,
         navigation: true,
         navigationPosition: 'right',
         autoScrolling: true,

@@ -11,13 +11,10 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="./vendor/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="./imges/favicon.png">
     <link rel="stylesheet" type="text/css" href="main.css" />
-
-
 </head>
-
 <body>
-
 
 <div id="nb-audiobtn">
     <svg id="playable" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" class="not-started">
@@ -51,6 +48,35 @@
     <div id="note-content"></div>
 </div>
 
+<div id="ShowNavBar">
+    <nav role="navigation" id="TheMargins_nav" >
+        <div id="menuToggle">
+            <!--
+            A fake / hidden checkbox is used as click reciever,
+            so you can use the :checked selector on it.
+            -->
+            <input type="checkbox" />
+
+            <!--
+            Some spans to act as a hamburger.
+            -->
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+                <a href="http://www.northeastern.edu/themargins/it-takes-two-to-transition"><li>It Takes Two to Transition</li></a>
+                <a href="http://www.northeastern.edu/themargins/the-dream-act-might-be ending-soon"><li>Immigration Status: Proud</li></a>
+                <a href="http://www.northeastern.edu/themargins/tech-was-supposed-to-be-the-great-equalizer"><li>Ctrl + Alt + Ignore</li></a>
+                <a href="http://www.northeastern.edu/themargins/a-new-identity"><li>An Identity Beyond He or She</li></a>
+                <a href="http://www.northeastern.edu/themargins/hacking-change"><li>Hacking Change</li></a>
+                <a href="http://www.northeastern.edu/themargins/between-choice-and-circumstance"><li>The Balance Between Choice and Circumstance</li></a>
+                <a href="http://www.northeastern.edu/rugglesmedia/"><li>More on Ruggles Media</li></a>
+
+            </ul>
+        </div>
+    </nav>
+</div>
 <audio id="ratAllAudio">
     <source id="ratAudioSource" src="">
     Your browser doesn't support the audio.
@@ -311,7 +337,7 @@
                         Your browser does not support the audio element.
                     </audio>
                 </div>
-                <div class="intro col-md-6 col-sm-12">
+                <div class="intro col-md-6 col-12">
                     <p class="endQuote">
                         “We are human. And we are pretty kick-ass once you get to know us."
                     </p>
@@ -321,7 +347,7 @@
                 <div class="col-md-2 offset-md-2 col-sm-12" >
                     <img id="shupeHead" src="imgs/shupeHead.png"/>
                 </div>
-                <div class="intro col-sm-12 col-md-6">
+                <div class="intro col-12 col-md-6">
                     <p class="endQuote">
                         “We just want to exist at our most core human level, free of harassment for doing so.
                         I want to see a society that’s been rebuilt and stripped of its existing hierarchies of things like sex and race.
@@ -330,6 +356,52 @@
                 </div>
             </div>
         </div>
+        <div class="section" id="section15">
+            <h1 class="landing_page">More stories from The Margins</h1>
+            <div class="row">
+                <div class="col-md-4 col-6">
+                    <a href="http://www.northeastern.edu/rugglesmedia">
+                        <img src="./imgs/teaserPlaceholder.png" />
+                        <h2 class="landing_page">More from Ruggles media</h2>
+                    </a>
+                </div>
+                <div class="col-md-4 col-6">
+                    <a href="http://www.northeastern.edu/themargins/between-choice-and-circumstance">
+                        <img src="./imgs/teaserPlaceholder.png">
+                        <h2 class="landing_page">The Balance Between Choice and Circumstance</h2>
+                    </a>
+                </div>
+                <div class="col-md-4 col-6">
+                    <a href="http://www.northeastern.edu/themargins/tech-was-supposed-to-be-the-great-equalizer">
+                        <img src="./imgs/teaserPlaceholder.png"/>
+                        <h2 class="landing_page">Tech was supposed to be the great equalizer.So where are all the black people?</h2>
+                    </a>
+                </div>
+                <div class="col-md-4 col-6">
+                    <a href="http://www.northeastern.edu/themargins/the-dream-act-might-be ending-soon" >
+                        <img src="./imgs/teaserPlaceholder.png" style="max-width:100%; height:auto" />
+                        <h2 class="landing_page">The Dream Act might be ending soon. Here's why you should care.</h2>
+                    </a>
+                </div>
+
+                <div class="col-md-4 col-6">
+                    <a href="http://www.northeastern.edu/themargins/it-takes-two-to-transition">
+                        <img src="./imgs/teaserPlaceholder.png" />
+                        <h2 class="landing_page">It Takes Two to Transition</h2>
+                    </a>
+                </div>
+
+                <div class="col-md-4 col-6">
+                    <a href="http://www.northeastern.edu/themargins/hacking-change">
+                        <img src="./imgs/teaserPlaceholder.png" />
+                        <h2 class="landing_page">Hacking Change</h2>
+                    </a>
+                </div>
+
+            </div>
+            <h6 class="TheMargins_footer"><span class="TheMargins_footer">| The Margins | </span>is a project of the Media Innovation program at the Northeastern University School of Journalism. © 2017</h6>
+        </div>
+
     </div>
 </div>
 

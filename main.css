@@ -126,7 +126,7 @@
 	font-size: 1.5rem;
 	line-height: 1.5rem;
 	border-bottom: solid 1px darkgrey;
-	font-family: “BentonSansComp-Bold”,“Helvetica”,sans-serif;
+	font-family: BentonSansComp-Bold ,Helvetica, sans-serif;
 	text-transform: uppercase;
 	color: black;
 }
@@ -143,7 +143,7 @@
 	-webkit-overflow-scrolling: touch;
 }
 h2.landing_page  {
-	font-family: "BentonSansComp-Bold","Helvetica",sans-serif;
+	font-family: BentonSansComp-Bold, Helvetica, sans-serif;
 	font-size: 1rem;
 	line-height: 1.2rem;
 	text-transform: uppercase;
@@ -663,7 +663,7 @@ h6.TheMargins_footer {
 }
 
 span.TheMargins_footer {
-	font-family: "BentonSansComp-Bold","Helvetica",sans-serif;
+	font-family: BentonSansComp-Bold ,Helvetica, sans-serif;
 	font-size: 1.5rem;
 	color: black;
 }

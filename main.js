@@ -10,7 +10,7 @@ $(document).ready(function() {
     var bouncyArrow =  document.getElementById('bouncyArrow1');
 
     var anchorsLink = ['1stPage', '2ndPage', '3rdPage','4thPage','5thPage','6thPage','7thPage',
-        '8thPage','9thPage','10thPage','11thPage','12thPage','13thPage','14thPage','15thPage'];
+        '8thPage','9thPage','10thPage','11thPage','12thPage','13thPage','14thPage','15thPage','End'];
 
 
     var allAudio = document.getElementById('ratAllAudio'),
@@ -35,7 +35,7 @@ $(document).ready(function() {
         fixedElements:'#bouncyArrow1，#nb-note, #nb-audiobtn, #ShowNavBar',
         bigSectionsDestination: 'top',
         navigationTooltips: ['Start', 'Second page', 'Third page', 'Forth Page', 'Fifth Page', 'Sixth Page','Seventh Page',
-            'Eighth Page','Ninth Page','10th Page','11th Page','12th Page','13th Page','14th Page','End'],
+            'Eighth Page','Ninth Page','10th Page','11th Page','12th Page','13th Page','14th Page','15th Page', 'End'],
         afterLoad: function(anchorLink, index){
             if(index==1){
                 videoOpen.play();
